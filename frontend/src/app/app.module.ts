@@ -8,17 +8,34 @@ import { RegisterComponent } from './public/components/register/register.compone
 import { LoginComponent } from './public/components/login/login.component';
 import { DashboardComponent } from './private/components/dashboard/dashboard.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { JwtModule } from '@auth0/angular-jwt';
+
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
+
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+    HttpClientModule,
+    MatSnackBarModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ['0.0.0.0:3003']
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
