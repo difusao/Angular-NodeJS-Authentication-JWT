@@ -1,6 +1,5 @@
 export interface LoginResponseI {
-    token: string;
-    token_type: string;
-    expires_in: number;
-    errors: string;
-  }
+  token: string;
+  token_type: string;
+  expires_in: number;
+}
