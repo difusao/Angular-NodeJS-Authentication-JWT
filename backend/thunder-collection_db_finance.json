@@ -1,0 +1,36 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "db_finance",
+    "dateExported": "2023-04-29T04:11:17.855Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "36a11668-82a5-43cc-ad27-7acd6d1cfd13",
+            "name": "oapi",
+            "containerId": "",
+            "created": "2023-04-29T03:18:53.568Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "5d990c1f-29b3-4da3-ba64-7e800dc080e4",
+            "colId": "3f217489-f21d-4bae-85c5-fd9861ab310e",
+            "containerId": "36a11668-82a5-43cc-ad27-7acd6d1cfd13",
+            "name": "login",
+            "url": "http://localhost:3003/oapi/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-04-29T03:07:05.947Z",
+            "modified": "2023-04-29T03:18:55.268Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"email\": \"difusao@gmail.com\",\n    \"password\": \"123456AbX#\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
